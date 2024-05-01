@@ -1,0 +1,161 @@
+img {
+    max-width: 130px;
+}
+
+body {
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+    background-color: #fbf1ea;
+    color: #525646;
+    /* font-family: "Gluten", cursive;
+    font-size: 17px; */
+    /* font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px; */
+    /* font-family: "Shrikhand", serif;
+    font-weight: 400; */
+    /* font-family: "Julius Sans One", sans-serif;
+    font-weight: 400; */
+    /* font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-size: 25px; */
+    /* font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-size: 22px; */
+    /* font-family: "Silkscreen", sans-serif;
+    font-weight: 300; */
+    /* font-family: "Saira", sans-serif;
+    font-weight: 400; */
+    font-family: "Kode Mono", monospace;
+    font-weight: 500;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.header__inner__logo {
+    height: 150px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+#header__inner__logo {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.form__num1__label2 {
+    padding-left: 20px;
+}
+
+#add__form__num2,
+#add__form__num3,
+#budget,
+#until_date {
+    margin-left: 5px;
+    /* height: 1.3em; */
+}
+
+.form__num2,
+.form_num3 {
+    padding-top: 20px;
+}
+
+.form__num1,
+.section__result1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.label__form__num2,
+.label__form__num3,
+.section__result2,
+.section__result3 {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.input__form__num2,
+.input__form__num3 {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+#stretch {
+    width: 35%;
+}
+
+button {
+    border-radius: 50%;
+}
+
+#calculate__button {
+    height: 2.5em;
+    width: 15em;
+    border-radius: 30px;
+    margin-top: 40px;
+    background-color: #e0e2ce;
+    font-family: "Gluten", cursive;
+    font-size: 17px;
+    color: #f5f4ef;
+    text-shadow: 1px 1px 2px #b8b5b0, 0px 0 1em #98a376;
+    border-color: #e9e7e0;
+}
+
+input {
+    border-radius: 30px;
+    border-color: #e9e7e0;
+    height: 1.5em;
+    background-color: #f5f4ef;
+}
+
+#tick__form__num2,
+#tick__form__num3 {
+    background-color: #e0e2ce;
+    color: #f5f4ef;
+    text-shadow: 1px 1px 2px #b8b5b0, 0px 0 1em #98a376;
+    border-color: #e9e7e0;
+}
+
+#cross__form__num2,
+#cross__form__num3 {
+    background-color: #e4e0d7;
+    color: #f5f4ef;
+    text-shadow: 1px 1px 2px #b8b5b0, 0px 0 1em #b8b5b0;
+    border-color: #e9e7e0;
+}
+
+.result__budget {
+    font-size: 50px;
+}
+
+.background-img {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
+
+
+
+
+/* let counter = 1;
+function add_more_field() {
+    counter += 1;
+    html = ' <div id="input__form__num2' + counter + '">\
+        < input type = "text" class="necessarySpendings" id = "stretch" name = "necesSpendingsName" placeholder = "rent, utilities, insurance, etc." >\
+        <input type="number" class="necessarySpendings" name="necesSpendingsPrice" placeholder="the amount">\
+            <button id="tick__form__num2">✔</button>\
+            <button id="cross__form__num2">✘</button>\
+        </div>'
+} */

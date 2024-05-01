@@ -1,0 +1,1 @@
+const budget = document.querySelector('#budget');
