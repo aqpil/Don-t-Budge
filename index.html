@@ -44,36 +44,43 @@
     <section class="main">
         <form action="" class="form__num1">
             <label for="budget">CURRENT BUDGET</label>
-            <input type="number" id="budget" name="budget">
+            <input type="number" id="budget" name="budget"></input>
             <label class="form__num1__label2" for="until_date">DATE OF THE NEXT TOP UP</label>
-            <input type="date" id="until_date" name="until_date">
+            <input type="date" id="until_date" name="until_date"></input>
         </form>
 
         <form action="" class="form__num2">
             <div class="label__form__num2">
                 <label for="necessarySpendings">ABSOLUTELY NECESSARY SPENDINGS</label>
-                <button id="add__form__num2">+</button>
+                <!-- <button id="add__form__num2">+</button> -->
             </div>
             <div class="input__form__num2">
-                <input type="text" class="necessarySpendings" id="stretch" name="necessarySpendings"
-                    placeholder="rent, utilities, insurance, etc.">
-                <input type="number" class="necessarySpendings" name="necessarySpendings" placeholder="the amount">
+                <input type="text" id="necessarySpendings1" id="stretch" name="necessarySpendings"
+                    placeholder="rent, utilities, insurance, etc."></input>
+                <input type="number" id="necessarySpendings2" name="necessarySpendings"
+                    placeholder="the amount"></input>
                 <button id="tick__form__num2">✔</button>
                 <button id="cross__form__num2">✘</button>
+            </div>
+            <div>
+                <ul id="necessarySpendingsUL"></ul>
             </div>
         </form>
 
         <form action="" class="form__num3">
             <div class="label__form__num3">
                 <label for="">WOULD LOVE TO AFFORD</label>
-                <button id="add__form__num3">+</button>
+                <!-- <button id="add__form__num3">+</button> -->
             </div>
             <div class="input__form__num3">
                 <input type="text" class="wantToAfford" id="stretch" name="wantToAfford"
-                    placeholder="presents, vacations, etc.">
-                <input type="number" class="wantToAfford" name="wantToAfford" placeholder="the amount">
+                    placeholder="presents, vacations, etc."></input>
+                <input type="number" class="wantToAfford" name="wantToAfford" placeholder="the amount"></input>
                 <button id="tick__form__num3">✔</button>
                 <button id="cross__form__num3">✘</button>
+            </div>
+            <div>
+                <ul id="wantToAffordUL"></ul>
             </div>
         </form>
     </section>
