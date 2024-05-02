@@ -10,17 +10,19 @@ const wantToAffordInput = document.querySelector('.wantToAfford');
 const necessarySpendUL = document.querySelector('#necessarySpendingsUL');
 const wantToAffordUL = document.querySelector('#wantToAffordUL');
 
-// tick1 = function () {
-//     console.log("You clicked the 1 tick!")
-// }
+
 
 tick1.addEventListener("click", function (event) {
     event.preventDefault();
     let li = document.createElement('li');
-    let t = document.createTextNode(necessarySpendInput1.value);
+    let t = document.createTextNode(`${necessarySpendInput1.value} ${necessarySpendInput2.value}`);
     li.appendChild(t);
-    necessarySpendUL.appendChild(t);
+    li.appendChild(cross1.cloneNode());
+    necessarySpendUL.appendChild(li);
 });
+
+
+
 
 cross1.addEventListener("click", function (event) {
     event.preventDefault();
