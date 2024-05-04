@@ -64,9 +64,12 @@ body {
     /* height: 1.3em; */
 }
 
-.form__num2,
-.form_num3 {
-    padding-top: 20px;
+.form__num2 {
+    margin-top: 25px;
+}
+
+#form__num3_trial {
+    margin-top: 15px;
 }
 
 .form__num1,
@@ -86,14 +89,17 @@ body {
 }
 
 .input__form__num2,
-.input__form__num3 {
+.input__form__num3,
+.form__num2__ul,
+.form__num3__ul {
     display: flex;
     justify-content: center;
     padding-top: 8px;
 }
 
-#stretch {
-    width: 35%;
+#necessarySpendings1,
+#wantToAfford1 {
+    width: 38%;
 }
 
 button {
@@ -104,7 +110,7 @@ button {
     height: 2.5em;
     width: 15em;
     border-radius: 30px;
-    margin-top: 40px;
+    margin-top: 7px;
     background-color: #e0e2ce;
     font-family: "Gluten", cursive;
     font-size: 17px;
@@ -128,14 +134,6 @@ input {
     border-color: #e9e7e0;
 }
 
-#cross__form__num2,
-#cross__form__num3 {
-    background-color: #e4e0d7;
-    color: #f5f4ef;
-    text-shadow: 1px 1px 2px #b8b5b0, 0px 0 1em #b8b5b0;
-    border-color: #e9e7e0;
-}
-
 .result__budget {
     font-size: 50px;
 }
@@ -146,7 +144,19 @@ input {
     bottom: 0px;
 }
 
+#cross__form__num2,
+#cross__form__num3 {
+    display: none;
+}
 
+#cross1Dupe,
+#cross2Dupe {
+    display: inline-block;
+    background-color: #e4e0d7;
+    color: #f5f4ef;
+    text-shadow: 1px 1px 2px #b8b5b0, 0px 0 1em #b8b5b0;
+    border-color: #e9e7e0;
+}
 
 
 /* let counter = 1;
