@@ -72,6 +72,10 @@ body {
     margin-top: 15px;
 }
 
+.section__result2 {
+    margin-top: 15px;
+}
+
 .form__num1,
 .section__result1 {
     display: flex;
