@@ -1,15 +1,22 @@
-const budget = document.querySelector('#budget');
+
+
 const tick1 = document.querySelector('#tick__form__num2');
 const cross1 = document.querySelector('#cross__form__num2');
-const tick2 = document.querySelector('#tick__form__num3');
-const cross2 = document.querySelector('#cross__form__num3');
-const calculateBtn = document.querySelector('#calculate__button');
 const necessarySpendInput1 = document.querySelector('#necessarySpendings1');
 const necessarySpendInput2 = document.querySelector('#necessarySpendings2');
-const wantToAffordInput1 = document.querySelector('#wantToAfford1');
-const wantToAffordInput2 = document.querySelector('#wantToAfford2');
 const necessarySpendUL = document.querySelector('#necessarySpendingsUL');
-const wantToAffordUL = document.querySelector('#wantToAffordUL');
+
+
+// necessarySpendInput1.addEventListener('keyup', (e) => {
+//     const inputV = e.currentTarget.value;
+//     tick1.disabled = false;
+
+//     if (inputV === "") {
+//         tick1.disabled = true;
+//     }
+// })
+
+const testArray = [];
 
 tick1.addEventListener("click", function (event) {
     event.preventDefault();
@@ -20,7 +27,21 @@ tick1.addEventListener("click", function (event) {
     li.appendChild(t);
     li.appendChild(cross1Dupe);
     necessarySpendUL.appendChild(li);
+
+    necessarySpendInput1.value = '';
+    necessarySpendInput2.value = '';
 });
+
+
+// return the num value of the lis for further calculations
+
+
+const tick2 = document.querySelector('#tick__form__num3');
+const cross2 = document.querySelector('#cross__form__num3');
+const wantToAffordInput1 = document.querySelector('#wantToAfford1');
+const wantToAffordInput2 = document.querySelector('#wantToAfford2');
+const wantToAffordUL = document.querySelector('#wantToAffordUL');
+
 
 tick2.addEventListener("click", function (event) {
     event.preventDefault();
@@ -31,26 +52,24 @@ tick2.addEventListener("click", function (event) {
     li.appendChild(t);
     li.appendChild(cross2Dupe);
     wantToAffordUL.appendChild(li);
+
+    wantToAffordInput1.value = '';
+    wantToAffordInput2.value = '';
 });
 
 
 
-cross1.addEventListener("click", function (event) {
-    event.preventDefault();
-    console.log("You clicked the 1st cross!");
-});
 
-tick2.addEventListener("click", function (event) {
-    event.preventDefault();
-    console.log("You clicked the 2nd tick!");
-});
+const calculateBtn = document.querySelector('#calculate__button');
+const budget = document.querySelector('#budget');
 
-cross2.addEventListener("click", function (event) {
-    event.preventDefault();
-    console.log("You clicked the 2nd cross!");
-});
 
 calculateBtn.addEventListener("click", function (event) {
     event.preventDefault();
-    console.log("You clicked calculate!");
+    const budgetValue = budget.value;
+    const expenses1 = necessarySpendInput2.value;
+    const expenses2 = wantToAffordInput2.value;
+
+    let result = budgetValue - expenses1 - expenses2;
+    console.log(result);
 });
