@@ -7,16 +7,7 @@ const necessarySpendInput2 = document.querySelector('#necessarySpendings2');
 const necessarySpendUL = document.querySelector('#necessarySpendingsUL');
 
 
-// necessarySpendInput1.addEventListener('keyup', (e) => {
-//     const inputV = e.currentTarget.value;
-//     tick1.disabled = false;
-
-//     if (inputV === "") {
-//         tick1.disabled = true;
-//     }
-// })
-
-const testArray = [];
+const amountsSum = [];
 
 tick1.addEventListener("click", function (event) {
     event.preventDefault();
@@ -28,12 +19,12 @@ tick1.addEventListener("click", function (event) {
     li.appendChild(cross1Dupe);
     necessarySpendUL.appendChild(li);
 
+    amountsSum.push(necessarySpendInput2.value);
     necessarySpendInput1.value = '';
     necessarySpendInput2.value = '';
 });
 
-
-// return the num value of the lis for further calculations
+// return/push the num value of the lis for further calculations
 
 
 const tick2 = document.querySelector('#tick__form__num3');
@@ -53,6 +44,7 @@ tick2.addEventListener("click", function (event) {
     li.appendChild(cross2Dupe);
     wantToAffordUL.appendChild(li);
 
+    amountsSum.push(wantToAffordInput2.value);
     wantToAffordInput1.value = '';
     wantToAffordInput2.value = '';
 });
@@ -67,9 +59,10 @@ const budget = document.querySelector('#budget');
 calculateBtn.addEventListener("click", function (event) {
     event.preventDefault();
     const budgetValue = budget.value;
-    const expenses1 = necessarySpendInput2.value;
-    const expenses2 = wantToAffordInput2.value;
+    let sum = 0;
 
-    let result = budgetValue - expenses1 - expenses2;
-    console.log(result);
+    for (let i = 0; i < amountsSum.length; i++) {
+        sum += (parseInt(amountsSum[i]));
+    }
+    console.log(budgetValue - sum);
 });
