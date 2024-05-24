@@ -15,12 +15,13 @@ body {
     font-style: normal;
     font-size: 25px; */
     /* font-family: "Shrikhand", serif;
-    font-weight: 400; */
-    /* font-family: "Julius Sans One", sans-serif;
-    font-weight: 400; */
-    /* font-family: "Poiret One", sans-serif;
     font-weight: 400;
     font-size: 25px; */
+    /* font-family: "Julius Sans One", sans-serif;
+    font-weight: 400; */
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
     /* font-family: "Staatliches", sans-serif;
     font-weight: 400;
     font-size: 22px; */
@@ -28,8 +29,8 @@ body {
     font-weight: 300; */
     /* font-family: "Saira", sans-serif;
     font-weight: 400; */
-    font-family: "Kode Mono", monospace;
-    font-weight: 500;
+    /* font-family: "Kode Mono", monospace;
+    font-weight: 500; */
 }
 
 .header__inner {
@@ -116,7 +117,7 @@ button {
     border-radius: 30px;
     margin-top: 7px;
     background-color: #e0e2ce;
-    font-family: "Gluten", cursive;
+    /* font-family: "Gluten", cursive; */
     font-size: 17px;
     color: #f5f4ef;
     text-shadow: 1px 1px 2px #b8b5b0, 0px 0 1em #98a376;
@@ -153,8 +154,8 @@ input {
     display: none;
 }
 
-#cross1Dupe,
-#cross2Dupe {
+.cross1Dupe,
+.cross2Dupe {
     display: inline-block;
     background-color: #e4e0d7;
     color: #f5f4ef;
