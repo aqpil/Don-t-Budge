@@ -1,4 +1,4 @@
-//  MAKE NO OPPORTUNITY TO SUBMIT EMPTY INPUTS, MAKE THE PAGE ADAPTABLE
+// MAKE THE PAGE ADAPTABLE
 
 const tick1 = document.querySelector('#tick__form__num2');
 const necessarySpendInput1 = document.querySelector('#necessarySpendings1');
@@ -13,31 +13,44 @@ function expense(name, amount) {
 }
 
 let expemseId = 0;
-// expense.id = 0;
 
 tick1.addEventListener("click", function (event) {
     event.preventDefault();
-    let li = document.createElement('li');
+    if (necessarySpendInput1.value !== '' && necessarySpendInput2.value !== '') {
 
+        let card = document.createElement('li');
+        const expenseValue = new expense(necessarySpendInput1.value, necessarySpendInput2.value);
+        card.id = expenseValue.expenseId;
 
-    let t = document.createTextNode(`${necessarySpendInput1.value} ${necessarySpendInput2.value}`);
-    li.appendChild(t);
+        let t = document.createTextNode(`${necessarySpendInput1.value} ${necessarySpendInput2.value}`);
+        card.appendChild(t);
 
-    let cross1Dupe = document.createElement('button');
-    cross1Dupe.innerText = '✘';
+        let cross1 = document.createElement('button');
+        cross1.innerText = '✘';
 
-    cross1Dupe.addEventListener("click", function (event2) {
-        event2.preventDefault();
+        cross1.addEventListener("click", function (event2) {
+            event2.preventDefault();
 
-        li.remove();
-    })
+            card.remove();
 
-    li.appendChild(cross1Dupe);
-    necessarySpendUL.appendChild(li);
+            expenses = [0, 1]
 
-    expenses.push(new expense(necessarySpendInput1.value, necessarySpendInput2.value));
-    necessarySpendInput1.value = '';
-    necessarySpendInput2.value = '';
+            for (let i = 0; i < expenses.length; i++) {
+                if (expenses[i].expenseId === card.id) {
+                    expenses.splice(i, 1);
+                    break;
+                }
+            }
+
+        })
+
+        card.appendChild(cross1);
+        necessarySpendUL.appendChild(card);
+
+        expenses.push(expenseValue);
+        necessarySpendInput1.value = '';
+        necessarySpendInput2.value = '';
+    }
 });
 
 
@@ -77,7 +90,6 @@ function calculateDaysBetween(now, untilDateValue) {
     return Math.ceil(timeDiff / (24 * 60 * 60 * 1000));
 }
 
-// Adding an event listener to the date input to calculate days when a date is selected
 untilDateInput.addEventListener('change', function () {
     let now = new Date();
     let daysBetween = calculateDaysBetween(now, this.value);
