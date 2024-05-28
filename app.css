@@ -6,7 +6,11 @@ body {
     max-width: 1220px;
     padding: 0 10px;
     margin: 0 auto;
-    background-color: #fbf1ea;
+    /* background-color: #fbf1ea; */
+    /* background-color: #ddf9f7; */
+    /* background-color: #fdfcdc; */
+    /* background-color: #d3d3ff; */
+    background-color: #eff7f6;
     color: #525646;
     /* font-family: "Gluten", cursive;
     font-size: 17px; */
@@ -36,7 +40,7 @@ body {
 .header__inner {
     display: flex;
     justify-content: center;
-    padding-top: 40px;
+    padding-top: 90px;
 }
 
 .header__inner__logo {
@@ -87,7 +91,9 @@ body {
 .label__form__num2,
 .label__form__num3,
 .section__result2,
-.section__result3 {
+.section__result3,
+.on__top,
+.of__each__other {
     display: flex;
     justify-content: center;
     padding-top: 10px;
@@ -120,7 +126,7 @@ button {
     /* font-family: "Gluten", cursive; */
     font-size: 17px;
     color: #f5f4ef;
-    text-shadow: 1px 1px 2px #b8b5b0, 0px 0 1em #98a376;
+    text-shadow: 1px 1px 2px #b8b5b0, 0px 0 1em #94a65d;
     border-color: #e9e7e0;
 }
 
@@ -135,7 +141,7 @@ input {
 #tick__form__num3 {
     background-color: #e0e2ce;
     color: #f5f4ef;
-    text-shadow: 1px 1px 2px #b8b5b0, 0px 0 1em #98a376;
+    text-shadow: 1px 1px 2px #b8b5b0, 0px 0 1em #94a65d;
     border-color: #e9e7e0;
 }
 
@@ -163,14 +169,31 @@ input {
     border-color: #e9e7e0;
 }
 
+@media screen and (max-width: 1000px) {
 
-/* let counter = 1;
-function add_more_field() {
-    counter += 1;
-    html = ' <div id="input__form__num2' + counter + '">\
-        < input type = "text" class="necessarySpendings" id = "stretch" name = "necesSpendingsName" placeholder = "rent, utilities, insurance, etc." >\
-        <input type="number" class="necessarySpendings" name="necesSpendingsPrice" placeholder="the amount">\
-            <button id="tick__form__num2">✔</button>\
-            <button id="cross__form__num2">✘</button>\
-        </div>'
-} */
+    .on__top,
+    .of__each__other {
+        width: 30%;
+    }
+
+    .form__num1__label2 {
+        /* direction: rtl; */
+        /* text-align: justify; */
+        text-align: right;
+    }
+
+    #until_date {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+
+    .on__top,
+    .of__each__other {
+        .form__num1 {
+            flex-direction: column;
+        }
+    }
+
+}
