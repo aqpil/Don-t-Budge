@@ -30,11 +30,7 @@ tick1.addEventListener("click", function (event) {
 
         cross1.addEventListener("click", function (event2) {
             event2.preventDefault();
-
             card.remove();
-
-            expenses = [0, 1]
-
             for (let i = 0; i < expenses.length; i++) {
                 if (expenses[i].expenseId === card.id) {
                     expenses.splice(i, 1);
@@ -62,20 +58,39 @@ const wantToAffordInput1 = document.querySelector('#wantToAfford1');
 const wantToAffordInput2 = document.querySelector('#wantToAfford2');
 const wantToAffordUL = document.querySelector('#wantToAffordUL');
 
-
 tick2.addEventListener("click", function (event) {
     event.preventDefault();
-    let li = document.createElement('li');
-    let t = document.createTextNode(`${wantToAffordInput1.value} ${wantToAffordInput2.value}`);
-    let cross2Dupe = cross2.cloneNode('✘');
-    cross2Dupe.class = 'cross2Dupe';
-    li.appendChild(t);
-    li.appendChild(cross2Dupe);
-    wantToAffordUL.appendChild(li);
+    if (wantToAffordInput1.value !== '' && wantToAffordInput2.value !== '') {
 
-    expenses.push(wantToAffordInput2.value);
-    wantToAffordInput1.value = '';
-    wantToAffordInput2.value = '';
+        let card1 = document.createElement('li');
+        const expenseValue = new expense(wantToAffordInput1.value, wantToAffordInput2.value);
+        card1.id = expenseValue.expenseId;
+
+        let t = document.createTextNode(`${wantToAffordInput1.value} ${wantToAffordInput2.value}`);
+        card1.appendChild(t);
+
+        let cross2 = document.createElement('button');
+        cross2.innerText = '✘';
+
+        cross2.addEventListener("click", function (event3) {
+            event3.preventDefault();
+            card1.remove();
+            for (let i = 0; i < expenses.length; i++) {
+                if (expenses[i].expenseId === card1.id) {
+                    expenses.splice(i, 1);
+                    break;
+                }
+            }
+
+        })
+
+        card1.appendChild(cross2);
+        wantToAffordUL.appendChild(card1);
+
+        expenses.push(expenseValue);
+        wantToAffordInput1.value = '';
+        wantToAffordInput2.value = '';
+    }
 });
 
 
@@ -115,21 +130,3 @@ calculateBtn.addEventListener("click", function (event) {
     dailyBudget.textContent = (((budgetValue - sum) / totalDays).toFixed(2));
     console.log(expenses);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// THIS DOESNT WORK! KINDLY REDO :)))
-// let idToRemove = parseInt(li.getAttribute('data-id')); // Get the unique ID from 'li'
-// let removed = expenses.splice(expenses.findIndex(item => item.id === idToRemove), 1); // Remove the corresponding element from the array
-// console.log(removed)
