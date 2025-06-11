@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/money_icon.png" type="image/png" />
     <title>Don't Budge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +32,7 @@
 </head>
 
 <body>
+    <main>
     <header class="header">
         <div class="container">
             <div class="header__inner">
@@ -43,30 +45,29 @@
 
     <section class="main">
         <form action="" class="form__num1">
-            <div class="on__top">
-                <label for="budget">CURRENT BUDGET</label>
-                <input type="number" id="budget" name="budget"></input>
+            <div class="form__field">
+              <label for="budget">CURRENT BUDGET</label>
+              <input type="number" class="padding-input" id="budget" name="budget" />
             </div>
-            <div class="of__each__other">
-                <label class="form__num1__label2" for="until_date">DATE OF THE NEXT TOP UP</label>
-                <input type="date" id="until_date" name="until_date"></input>
+            <div class="form__field">
+              <label for="until_date">DATE OF THE NEXT TOP UP</label>
+              <input type="date" id="until_date" name="until_date" />
             </div>
-        </form>
+          </form>
 
         <form action="" class="form__num2">
             <div class="label__form__num2">
                 <label for="necessarySpendings">ABSOLUTELY NECESSARY SPENDINGS</label>
-                <!-- <button id="add__form__num2">+</button> -->
             </div>
             <div class="input__form__num2">
-                <input type="text" id="necessarySpendings1" name="necessarySpendings"
+                <input type="text" class="padding-input" id="necessarySpendings1" name="necessarySpendings"
                     placeholder="rent, utilities, insurance, etc."></input>
-                <input type="number" id="necessarySpendings2" name="necessarySpendings"
+                <input type="number" class="padding-input" id="necessarySpendings2" name="necessarySpendings"
                     placeholder="the amount"></input>
                 <button id="tick__form__num2">✔</button>
             </div>
             <div class="form__num2__ul">
-                <ul id="necessarySpendingsUL">
+                <ul id="necessarySpendingsUL" class="outcome-list">
 
                 </ul>
             </div>
@@ -78,13 +79,13 @@
                 <!-- <button id="add__form__num3">+</button> -->
             </div>
             <div class="input__form__num3">
-                <input type="text" id="wantToAfford1" name="wantToAfford"
+                <input type="text" class="padding-input" id="wantToAfford1" name="wantToAfford"
                     placeholder="presents, vacations, etc."></input>
-                <input type="number" id="wantToAfford2" name="wantToAfford" placeholder="the amount"></input>
+                <input type="number" class="padding-input" id="wantToAfford2" name="wantToAfford" placeholder="the amount"></input>
                 <button id="tick__form__num3">✔</button>
             </div>
             <div class="form__num3__ul">
-                <ul id="wantToAffordUL">
+                <ul id="wantToAffordUL" class="outcome-list">
 
                 </ul>
             </div>
@@ -93,7 +94,7 @@
 
     <section class="result">
         <div class="section__result1">
-            <button type="button"="calculate__button" id="calculate__button">
+            <button button type="button" class="calculate__button" id="calculate__button">
                 CALCULATE
             </button>
         </div>
@@ -110,11 +111,15 @@
     </section>
 
     <div id="background-img" class="background-img">
-        <img id="background__flower" src="images/flower_solid.png" alt="flower">
+        <img id="background__flower" src="images/flower_solid.png" alt="flower" >
     </div>
 
+    <div id="background-top" class="background-top">
+        <img id="flower_top" src="images/flower_center.png" alt="flower" >
+    </div>
 
     <script src="app.js"></script>
+</main>
 </body>
 
 </html>

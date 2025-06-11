@@ -1,5 +1,3 @@
-// MAKE THE PAGE ADAPTABLE
-
 const tick1 = document.querySelector('#tick__form__num2');
 const necessarySpendInput1 = document.querySelector('#necessarySpendings1');
 const necessarySpendInput2 = document.querySelector('#necessarySpendings2');
@@ -27,6 +25,7 @@ tick1.addEventListener("click", function (event) {
 
         let cross1 = document.createElement('button');
         cross1.innerText = '✘';
+        cross1.classList.add('remove-button');
 
         cross1.addEventListener("click", function (event2) {
             event2.preventDefault();
@@ -71,6 +70,7 @@ tick2.addEventListener("click", function (event) {
 
         let cross2 = document.createElement('button');
         cross2.innerText = '✘';
+        cross2.classList.add('remove-button');
 
         cross2.addEventListener("click", function (event3) {
             event3.preventDefault();
