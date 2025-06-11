@@ -37,7 +37,7 @@ I found myself regularly calculating my budget in a specific way using a basic c
 
 ### What I Learned
 
-This project was a full start-to-finish experience — from naming the app and choosing fonts, to building a responsive layout and writing custom logic for budget calculations.
+This project was a full start-to-finish experience - from naming the app and choosing fonts, to building a responsive layout and writing custom logic for budget calculations.
 
 The highlight for me was developing a custom input flow and ensuring that user-entered values were handled intuitively and accurately within the interface.
 
